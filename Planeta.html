@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Cola Camera </title>
+        <link rel="stylesheet" href="Artworks.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body class="body">
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logoss.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="ABOUT.html">ABOUT</a></li>
+                        <li><a href="SHOWCASE.html">SHOWCASE</a></li>
+                        <li><a href="BLOG.html">BLOG</a></li>
+                        <li><a href="CONTACT.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+        </section>
+
+
+<!----facilities-->
+<section class="facilities">
+    <h1>Sci-Fi</h1>
+    <p>Here shows some Sci-Fi theme works</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="ARTWORKs/Planeta/Color.jpg">
+            <h3>Planeta, Espaço Sideral, Estrangeiro</h3>
+            <p>My first Sci-Fi work. I have been wanting to try to create sci-fi theme for a long time  
+                because I always got impressed by other creators' works on instagram. 
+                In this photo, there is a huge human like alien in the center. 
+                And there is a halo around the alien which representing some greater species or civilization 
+                in the outer space. And in the right, there is a Portal and a human standing in front of it. 
+                The whole idea of this picture is exploring other planets in the universe.
+            </p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="ARTWORKs/Planeta/WHite.jpg">
+            <h3>The 3D models</h3>
+            <p>The models is mostly complete with basic elements. In this picture, I have to use a wider
+                camera view in order to contain more elements in one picture.
+            </p>
+        </div>
+
+    </div>
+
+  
+</section>
+
+ 
+<!---------Footer------->
+<SEction>
+
+
+
+
+
+    <div class="footer">
+
+ <div class="return">
+<a href="SHOWCASE.html"><p><i class="fa fa-chevron-circle-left"></i> Return to Showcase</p></a>
+
+    </div>
+
+
+    <div><a href="index.html"><img src="images/LOGOss.png"></a></div>
+    <div class="Fcontact">
+        <h3>Contact me via :</h3>
+        <p><a href="https://www.instagram.com/sebast1a0.mo/"><i class="fa fa-instagram"></i></a> / <i class="fa fa-envelope-o"></i> Sebast1a0mo1998@gmail.com </p>
+    </div>
+    
+    <p class="FP">Copyright<i class="fa fa-copyright"> 2022 Sebastian. All Rights Reserved. </i></p>
+    </div>
+    
+    </SEction>
+
+
+
+
+<!--------JavaScript------->
+        <script>
+            
+            var navLinks = document.getElementById("navLinks")
+            
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+            var scrollEventHandler = function()
+{
+  window.scroll(0, window.pageYOffset)
+}
+
+window.addEventListener("scroll", scrollEventHandler, false);
+
+            </script>
+
+
+
+    </body>
+</html>

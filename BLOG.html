@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Sebastian </title>
+        <link rel="stylesheet" href="BLOG.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body class="body">
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logoss.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="ABOUT.html">ABOUT</a></li>
+                        <li><a href="SHOWCASE.html">SHOWCASE</a></li>
+                        <li><a href="BLOG.html">BLOG</a></li>
+                        <li><a href="CONTACT.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+        </section>
+
+
+<!----facilities-->
+<section class="facilities">
+
+    <h1>BLOG</h1>
+    <p>Here shows my blogs, notes and dailies.</p>
+
+
+
+
+    <a href="BLOG1.html">
+    <div class="row b1">
+        
+            
+            
+        
+
+        <div class="facilities-col">
+            
+            <h3>Setting up a Website</h3>
+            <p> Due to the Covid issue, I have been self-quarantined since 19 May 2022. 
+                Stuck at home, I have decided to learn HTML and CSS coding. 
+                Youtube is always a good place to start with. 
+                Instead of learning it from basic, I took a short cut ...... 
+            </p>
+        
+        </div>
+
+<div class="date"><p2>Posted on 28 May 2022</p2></div>
+    </div></a>
+
+<!---
+    <div class="row b2">
+        
+        <img src="images/Untitled-1.jpg">
+        
+
+    <div class="facilities-col">
+        
+        <h3>GRAPHICS DESIGNER/ 3D DESIGNER</h3>
+        <p> I am a Graphics Designer from Macau. Sharing my artworks and thoughts on this Website. 
+            I did not studied Visual Arts related courses in my university. Graphics Design is just one of 
+            my interest. I am learning 3D modeling all by myself. Besides, I am also into photography, 
+            F1, SimRacing, Video Games, and Working out. If you found my works interesting, 
+            please give me a like on my Instagram. ;)</p>
+
+            
+    </div>
+        <div class="date"><p2>Public in 28 may 2022</p2></div>
+</div>
+-->
+
+</section>
+
+
+
+<!---------Footer------->
+<SEction>
+<div class="footer">
+<div><a href="index.html"><img src="images/LOGOss.png"></a></div>
+<div class="Fcontact">
+    <h3>Contact me via :</h3>
+    <p><a href="https://www.instagram.com/sebast1a0.mo/"><i class="fa fa-instagram"></i></a> / <i class="fa fa-envelope-o"></i> Sebast1a0mo1998@gmail.com </p>
+</div>
+
+<p class="FP">Copyright<i class="fa fa-copyright"> 2022 Sebastian. All Rights Reserved. </i></p>
+</div>
+
+
+
+
+
+</SEction>
+
+
+
+<!--------JavaScript------->
+        <script>
+            
+            var navLinks = document.getElementById("navLinks")
+            
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+            var scrollEventHandler = function()
+{
+  window.scroll(0, window.pageYOffset)
+}
+
+window.addEventListener("scroll", scrollEventHandler, false);
+            </script>
+
+
+
+    </body>
+</html>

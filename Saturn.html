@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Cola Camera </title>
+        <link rel="stylesheet" href="Artworks.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body class="body">
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logoss.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="ABOUT.html">ABOUT</a></li>
+                        <li><a href="SHOWCASE.html">SHOWCASE</a></li>
+                        <li><a href="BLOG.html">BLOG</a></li>
+                        <li><a href="CONTACT.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+        </section>
+
+
+<!----facilities-->
+<section class="facilities">
+    <h1>Sound of Saturn</h1>
+    <p>The crossover of Saturn and vinyl.</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="ARTWORKs/Saturn/SSEd.jpg">
+            <h3>Sound of Saturn</h3>
+            <p>The idea was inspired while I was trying to model a vinyl record. During the process,
+                 the shape of vinyl kinda reminded me of Saturn. Therefore, an idea came into my mind. 
+                 Merging the elements of vinyl and Saturn with one another. 
+            </p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="ARTWORKs/Saturn/SSsEd.jpg">
+            <h3>The 3D models</h3>
+            <p>The hardest part of this project is trying to get the planet scene. 
+                The planet was made by displacement effect. Besides, 
+                the lighting is also very important in order to achieve the scene I wanted.
+            </p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="ARTWORKs/Saturn/p c.JPG">
+            <h3>Planet Scene
+            </h3>
+            <p>Fun fact that after I posted it on Instagram. 
+                A friend reminded me that Saturn is actually a gas planet, 
+                not a rocky planet. LoL, I should have found out earlier. </p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="ARTWORKs/Saturn/p w.JPG">
+            <p>Planet Scene Draft
+            </p>
+        </div>
+
+        <div class="facilities-sq">
+            <img src="ARTWORKs/Saturn/player c.JPG">
+            
+            <p>Player Scene</p>
+            
+        </div>
+
+        <div class="facilities-sq">
+            <img src="ARTWORKs/Saturn/player w.JPG">
+            
+            <p>Player Scene Draft</p>
+        </div>
+
+        <div class="facilities-sq">
+            <img src="ARTWORKs/Saturn/Album white copy.jpg">
+            
+            <p>Album Scene Draft</p>
+        </div>
+
+        <div class="facilities-sq">
+            <img src="ARTWORKs/Saturn/Album color copy.jpg">
+            
+            <p>Album Scene</p>
+        </div>
+    </div>
+
+  
+</section>
+
+ 
+<!---------Footer------->
+<SEction>
+
+
+
+
+
+    <div class="footer">
+
+ <div class="return">
+<a href="SHOWCASE.html"><p><i class="fa fa-chevron-circle-left"></i> Return to Showcase</p></a>
+
+    </div>
+
+
+    <div><a href="index.html"><img src="images/LOGOss.png"></a></div>
+    <div class="Fcontact">
+        <h3>Contact me via :</h3>
+        <p><a href="https://www.instagram.com/sebast1a0.mo/"><i class="fa fa-instagram"></i></a> / <i class="fa fa-envelope-o"></i> Sebast1a0mo1998@gmail.com </p>
+    </div>
+    
+    <p class="FP">Copyright<i class="fa fa-copyright"> 2022 Sebastian. All Rights Reserved. </i></p>
+    </div>
+    
+    </SEction>
+
+
+
+
+<!--------JavaScript------->
+        <script>
+            
+            var navLinks = document.getElementById("navLinks")
+            
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+            var scrollEventHandler = function()
+{
+  window.scroll(0, window.pageYOffset)
+}
+
+window.addEventListener("scroll", scrollEventHandler, false);
+
+            </script>
+
+
+
+    </body>
+</html>

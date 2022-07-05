@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> SHOWCASE </title>
+        <link rel="stylesheet" href="styleshowcase.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body class="body">
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logoss.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="ABOUT.html">ABOUT</a></li>
+                        <li><a href="SHOWCASE.html">SHOWCASE</a></li>
+                        <li><a href="BLOG.html">BLOG</a></li>
+                        <li><a href="CONTACT.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+        </section>
+
+
+<!----- campus ----->
+<section class="campus">
+<h1>SHOWCASE</h1>
+<p>Here shows, my 3D Artworks, Projects and Concepts</p>
+<div class="row">
+    <a href="Minilux.html"><div class="campus-col">
+        <a href="Minilux.html"><img src="ARTWORKs/MINILUX/Minilux Banner copy.jpg"></a>
+        <a href="Minilux.html"><div class="layer"><h3>Concept<br>Coca-Cola Camera</h3></div></a>
+    </div></a>
+
+ <div class="campus-col">
+        <img src="ARTWORKs/SteeringWheel/cover.jpg">
+        <div class="layer"><h3>Ferrari<br> F1 Steering Wheel</h3></div>
+    </div>
+
+    <a href="Planeta.html"><div class="campus-col">
+        <a href="Planeta.html"><img src="ARTWORKs/Planeta/COVER.jpg"></a>
+        <a href="Planeta.html"><div class="layer"><h3>Sci-Fi<br>Planeta, Estrangeiro</h3></div></a>
+    </div></a>
+
+    <a href="Saturn.html"><div class="campus-col">
+        <a href="Saturn.html"><img src="ARTWORKs/Saturn/COVER.jpg"></a>
+        <a href="Saturn.html"><div class="layer"><h3>Concept<br> Saturn Album</h3></div></a>
+    </div></a>
+
+    <div class="campus-col">
+        <img src="ARTWORKs/Marshall/cover.jpg">
+        <div class="layer"><h3>Speaker<br> Marshall in Chinese</h3></div>
+    </div>
+
+   <div class="campus-col">
+        <img src="ARTWORKs/Wine/wine23.jpg">
+        <div class="layer"><h3>Wine</h3></div>
+    </div>
+
+   
+ 
+</div>
+
+</section>
+
+<!---------Footer------->
+<SEction>
+    <div class="footer">
+    <div><a href="index.html"><img src="images/LOGOss.png"></a></div>
+    <div class="Fcontact">
+        <h3>Contact me via :</h3>
+        <p><a href="https://www.instagram.com/sebast1a0.mo/"><i class="fa fa-instagram"></i></a> / <i class="fa fa-envelope-o"></i> Sebast1a0mo1998@gmail.com </p>
+    </div>
+    
+    <p class="FP">Copyright<i class="fa fa-copyright"> 2022 Sebastian. All Rights Reserved. </i></p>
+    </div>    
+
+</SEction>
+
+<!--------JavaScript------->
+        <script>
+            
+            var navLinks = document.getElementById("navLinks")
+            
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+            var scrollEventHandler = function()
+{
+  window.scroll(0, window.pageYOffset)
+}
+
+window.addEventListener("scroll", scrollEventHandler, false);
+
+
+
+            </script>
+
+    </body>
+</html>

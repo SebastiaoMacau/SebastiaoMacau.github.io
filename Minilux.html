@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Cola Camera </title>
+        <link rel="stylesheet" href="Artworks.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body class="body">
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logoss.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="ABOUT.html">ABOUT</a></li>
+                        <li><a href="SHOWCASE.html">SHOWCASE</a></li>
+                        <li><a href="BLOG.html">BLOG</a></li>
+                        <li><a href="CONTACT.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+        </section>
+
+
+<!----facilities-->
+<section class="facilities">
+    <h1>Coca-Cola Camera</h1>
+    <p>What if... Coca-cola was a camera brand, what would their camera look like?</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="ARTWORKs/MINILUX/Minilux Banner copy.jpg">
+            <h3>The Coca-Cola Minilux</h3>
+            <p>As many people may find that Coca-Cola's logo and Leica's logo looks alike. 
+                Well, at least I do feel they look alike. Perhaps, if Coca-Cola manufacture camera, it would be like Leica's. 
+                Therefore, I created a camera model based on Leica's Minilux. 
+                Instead of paste a Leica's logo on it, I switch switch it 
+                to a Coca-Cola's logo. I think it would be cool if they did a crossover. LoL.
+            </p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="ARTWORKs/MINILUX/Reb2bdw.jpg">
+            <h3>The 3D models</h3>
+            <p>This is the 3D models I created for this project.
+                The camera's body is the hardest part because each edge's arch is different.
+                It's more than just a regular box and it was hard to get it right. Once the body was done, the len
+                is just combination of the cylinders.
+            </p>
+        </div>
+
+        <div class="facilities-sq">
+            <img src="ARTWORKs/MINILUX/Reb2bdw2.jpg">
+            
+            <p>Different view of the camera</p>
+        </div>
+
+        <div class="facilities-sq">
+            <img src="ARTWORKs/MINILUX/Reb2bdw22.jpg">
+            
+            <p>With camera glory on</p>
+        </div>
+
+        <div class="facilities-sq">
+            <img src="ARTWORKs/MINILUX/Re.jpg">
+            
+            <p>Different look of the camera #2</p>
+        </div>
+
+        <div class="facilities-sq">
+            <img src="ARTWORKs/MINILUX/Re2.jpg">
+            
+            <p>Different look of the camera #3</p>
+        </div>
+    </div>
+
+  
+</section>
+
+ 
+<!---------Footer------->
+<SEction>
+
+
+
+
+
+    <div class="footer">
+
+ <div class="return">
+<a href="SHOWCASE.html"><p><i class="fa fa-chevron-circle-left"></i> Return to Showcase</p></a>
+
+    </div>
+
+
+    <div><a href="index.html"><img src="images/LOGOss.png"></a></div>
+    <div class="Fcontact">
+        <h3>Contact me via :</h3>
+        <p><a href="https://www.instagram.com/sebast1a0.mo/"><i class="fa fa-instagram"></i></a> / <i class="fa fa-envelope-o"></i> Sebast1a0mo1998@gmail.com </p>
+    </div>
+    
+    <p class="FP">Copyright<i class="fa fa-copyright"> 2022 Sebastian. All Rights Reserved. </i></p>
+    </div>
+    
+    </SEction>
+
+
+
+
+<!--------JavaScript------->
+        <script>
+            
+            var navLinks = document.getElementById("navLinks")
+            
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+            var scrollEventHandler = function()
+{
+  window.scroll(0, window.pageYOffset)
+}
+
+window.addEventListener("scroll", scrollEventHandler, false);
+
+            </script>
+
+
+
+    </body>
+</html>

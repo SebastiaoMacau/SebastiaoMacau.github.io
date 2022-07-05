@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Cola Camera </title>
+        <link rel="stylesheet" href="BLOGsss.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body class="body">
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logoss.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="ABOUT.html">ABOUT</a></li>
+                        <li><a href="SHOWCASE.html">SHOWCASE</a></li>
+                        <li><a href="BLOG.html">BLOG</a></li>
+                        <li><a href="CONTACT.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+        </section>
+
+
+<!----facilities-->
+<section class="facilities">
+    <h1>BLOG#1 SETTING UP A WEBSITE</h1>
+
+    <div class="row">
+        <div class="facilities-col">
+
+            <img src="BLOGS/BLOG1/cover.jpg">
+            
+            <p>Due to the Covid issue, I have been self-quarantined since 19 May 2022. 
+                Stuck at home, I have decided to learn HTML and CSS coding. 
+                Youtube is always a good place to start with. Instead of learning it from basic, 
+                I took a short cut. Considering I had already learnt a little bit HTML coding in secondary school. 
+                I just found a tutorial on Youtube and follow the example to build up my website. Once the frame is done, 
+                I started to modify the content and adding my picture in it. 
+                Finally, finished my website which took me approximately a week.
+
+            </p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="BLOGS/BLOG1/sc.jpg">
+            <h3>Why I wanted to build a website?</h3>
+            <p>The reason is simple, I want to have a place display my works. 
+                Despite the Instagram is a great platform for me to show my works, it limited the format of post 
+                , the text description and picture counts. 
+                And that is not what I want to display my works.
+                 The other platform I tried, for example, Wordpress. It's convenience to setting a website, 
+                 however, I still found it hard to fully customise a website the way i wanted, especially in the free version. 
+                 Therefore, I decided to spend time to build a website by coding. And I'm glad I did that.
+            </p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="BLOGS/BLOG1/css.jpg">
+            <h3>Process and Difficulties</h3>
+            <p>Although I learned the basic of HTML coding at high school, 
+                I forgot pretty much everything by now and I'm quite sure that I did not learn the CSS. 
+                Therefore, when I decided to follow the tutorial to build a website, 
+                it was confusing for me to understand. Especially the css code, I have absolutely no idea. 
+                <p>However, during the process I started to find the patterns. 
+                I was surprised that it was quite eazy to understand. 
+                The HTML file determine the frame and content of a website. 
+                And CSS file is to decided how the contents are being shown. 
+                CSS is like a designer of the website which contain the position, color, 
+                background and more informations of each elements. When I started to modify my website,
+                 it can be quite messy when codes started to getting more and more. 
+                 I think it was not hard to get the effect I want because what I want is simple. However,
+                  organising the codes and make them clear and simple is the hardest part. </p>
+            </p>
+
+            <p>On the other hand, making a website from coding gives me maximum freedom to custom my website.
+                 The whole process is like designing a poster with code instead of photoshop. 
+                 The outcome might be less straight forward, you might have to refresh the page a few times to see the outcome.
+                  In the end I'm satisfied with this website.</p>
+        </div>
+
+        <div class="facilities-col">
+            <img src="BLOGS/BLOG1/code html.jpg">
+            <h3>The imperfections </h3>
+            <p>Despite the website can achieve what I want now, I can pre-see some problems that will happen in the future. 
+                For example, I will running out of Github's space because it only offer 500MB of space for free user. 
+                Besides, this website also have some downsides. What I have did on this website is mainly just the font-end web development. 
+                The website lacks of a lot of other functions, functions that can be done with JAVASCRIPT or other languages. 
+                For example, I can't collect feedbacks of visitors on this website. I can't save any data of visitors. 
+                And I can not even know how to record visitor counts on this website. 
+                If you know some easy way to achieve those functions, please do let me know. Thanks :) 
+                </p>
+        </div>
+
+
+
+
+        
+    </div>
+
+  
+</section>
+
+ 
+<!---------Footer------->
+<SEction>
+
+
+
+
+
+    <div class="footer">
+
+ <div class="return">
+<a href="BLOG.html"><p><i class="fa fa-chevron-circle-left"></i> Return to BLOG</p></a>
+
+    </div>
+
+
+    <div><a href="index.html"><img src="images/LOGOss.png"></a></div>
+    <div class="Fcontact">
+        <h3>Contact me via :</h3>
+        <p><a href="https://www.instagram.com/sebast1a0.mo/"><i class="fa fa-instagram"></i></a> / <i class="fa fa-envelope-o"></i> Sebast1a0mo1998@gmail.com </p>
+    </div>
+    
+    <p class="FP">Copyright<i class="fa fa-copyright"> 2022 Sebastian. All Rights Reserved. </i></p>
+    </div>
+    
+    </SEction>
+
+
+
+
+<!--------JavaScript------->
+        <script>
+            
+            var navLinks = document.getElementById("navLinks")
+            
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+            var scrollEventHandler = function()
+{
+  window.scroll(0, window.pageYOffset)
+}
+
+window.addEventListener("scroll", scrollEventHandler, false);
+
+            </script>
+
+
+
+    </body>
+</html>
