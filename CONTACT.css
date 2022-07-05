@@ -13,6 +13,15 @@
     max-width: 100%;
     overflow-x: hidden;
 }
+
+html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+
+  
 nav{
     display: flex;
     padding: 2% 6%;

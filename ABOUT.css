@@ -4,7 +4,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .header{
-    min-height: 5vh;
+    min-height: 6vh;
     width: 100%;
     background-image: linear-gradient(rgb(26, 26, 26),rgba(0,0,0,1));
     background-position: center;
@@ -12,6 +12,15 @@
     position: relative;
 
 }
+
+html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+
+  
 nav{
     display: flex;
     padding: 2% 6%;

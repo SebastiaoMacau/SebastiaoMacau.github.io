@@ -12,6 +12,14 @@
     position: relative;
 
 }
+
+html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+  
 nav{
     display: flex;
     padding: 2% 6%;
