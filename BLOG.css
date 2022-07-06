@@ -90,7 +90,7 @@ nav .fa{
     }
     .nav-links{
         position: absolute;
-        background: #f44336;
+        background: linear-gradient(rgba(2, 6, 23, 1),rgba(19, 2, 23, 0.9), rgba(2, 6, 23, 0.05));
         height: 100vh;
         width: 200px;
         top: 0;
@@ -197,7 +197,6 @@ p2{
 
 .date{
     position: absolute;
-    width: 40%;
 bottom: 3px;
 right: 10px;
 text-align: right;
@@ -216,10 +215,13 @@ text-align: right;
         width: 90%;
         padding: 0;
     }
-    .dateL{
-        position: relative;
-        right: 0;
-        bottom: 5px;
+  
+    .date{
+        position: absolute;
+    bottom: 3px;
+    right: 10px;
+    text-align: right;
+    font-size: 8px;
     }
 
     .facilities-col h3{
