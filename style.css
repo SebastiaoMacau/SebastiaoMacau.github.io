@@ -104,7 +104,7 @@ nav img{
 }
 .hero-btn:hover{
     border: 1px solid #f44336;
-    background: #f44336;
+    background: linear-gradient(90deg, #fc4a1a, #f7b733);
     transition: 1s;
 }
 
