@@ -426,6 +426,10 @@ text-align: center;
         margin: 3px;
     }
 
+    .tag h5{
+        font-size: 24px;
+    }
+
     .B-text{
     
         flex-basis: 70%;
