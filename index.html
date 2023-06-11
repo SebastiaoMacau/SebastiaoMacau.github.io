@@ -1,59 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Sebastian </title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> 
-    </head>
-    <body>
-        <section class="header">
-            <nav>
-                <a href="index.html"><img src="images/LOGOss.png"></a>
-                <div class="nav-links" id="navLinks">
-                    <img class="menu" src="images/Close.png" onclick="hideMenu()">
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="ABOUT.html">ABOUT</a></li>
-                        <li><a href="SHOWCASE.html">SHOWCASE</a></li>
-                        <li><a href="BLOG.html">BLOG</a></li>
-                        <li><a href="CONTACT.html">CONTACT</a></li>
-                    </ul>
-                </div>
-                <img class="menu" src="images/Menu.png" onclick="showMenu()">
-            </nav>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastian</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/LOGOss.png"></a>
+            <div class="nav-links" id="navLinks">
+                <img class="menu" src="images/Close.png" onclick="hideMenu()">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="ABOUT.html">ABOUT</a></li>
+                    <li><a href="SHOWCASE.html">SHOWCASE</a></li>
+                    <li><a href="BLOG.html">BLOG</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <img class="menu" src="images/Menu.png" onclick="showMenu()">
+        </nav>
 
-            <div class="text-box">
-                <p2>Hello! I am</p2>
-                <h1>SEBASTIAN</h1>
-                <p>WELCOME TO MY WEBSITE<br>GRAPHICS DESIGNER/ 3D DESIGNER</p>
-                <a href="SHOWCASE.html" class="hero-btn">View my showcase</a>
+        <div class="text-box">
+            <p2>Hello! I am</p2>
+            <h1>SEBASTIAN</h1>
+            <p>WELCOME TO MY WEBSITE<br>GRAPHICS DESIGNER/3D DESIGNER</p>
+            <a href="SHOWCASE.html" class="hero-btn">View my showcase</a>
+            
+            
+        </div>
+        
+<div class="COUNTER">
+                <p>You are the <span id="visitorCount"></span> <span2 class="counterend"id="visitorSuffix"></span2> Visitor.</p>
             </div>
 
+        <p class="FP">Copyright<img src="images/Copyright.png"> 2022 Sebastian. All Rights Reserved.
+        </p>
+    </section>
 
-            <p class="FP">Copyright<img src="images/Copyright.png"> 2022 Sebastian. All Rights Reserved. </p>
-        </section>
-
-       
-
-
-
-
-
-<!--------JavaScript------->
-        <script>
-            
-            var navLinks = document.getElementById("navLinks")
-            
-            function showMenu(){
-                navLinks.style.right = "0";
+    <script>
+        var navLinks = document.getElementById("navLinks");
+      
+        function showMenu() {
+          navLinks.style.right = "0";
+        }
+      
+        function hideMenu() {
+          navLinks.style.right = "-200px";
+        }
+      
+        document.addEventListener("DOMContentLoaded", function () {
+          // Retrieve the current count from LocalStorage or initialize it to 0
+          let count = parseInt(localStorage.getItem("visitorCount")) || 0;
+      
+          // Increment the count for each visit
+          count++;
+      
+          // Update the count in the LocalStorage and display it on the page
+          localStorage.setItem("visitorCount", count);
+          document.getElementById("visitorCount").textContent = count;
+      
+          // Determine the suffix for the count
+          const suffix = getSuffix(count);
+          document.getElementById("visitorSuffix").textContent = suffix;
+      
+          // Animate the visitor count
+          animateCount(count);
+        });
+      
+        function animateCount(targetCount) {
+          const element = document.getElementById("visitorCount");
+          const duration = 1000; // Duration for the animation in milliseconds
+          const framesPerSecond = 30; // Number of frames per second for smooth animation
+          const increment = Math.ceil(targetCount / (duration / 1000) * (1 / framesPerSecond));
+      
+          let currentCount = 0;
+      
+          const intervalId = setInterval(() => {
+            if (currentCount >= targetCount) {
+              element.textContent = targetCount;
+              clearInterval(intervalId);
+            } else {
+              currentCount += increment;
+              element.textContent = currentCount;
             }
-            function hideMenu(){
-                navLinks.style.right = "-200px";
+          }, 1000 / framesPerSecond);
+        }
+      
+        function getSuffix(count) {
+          if (count === 11 || count === 12 || count === 13) {
+            return "th";
+          } else {
+            const lastDigit = count % 10;
+            switch (lastDigit) {
+              case 1:
+                return "st";
+              case 2:
+                return "nd";
+              case 3:
+                return "rd";
+              default:
+                return "th";
             }
-            </script>
-
-    </body>
+          }
+        }
+    </script>
+</body>
 </html>

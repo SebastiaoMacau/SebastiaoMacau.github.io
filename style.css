@@ -163,3 +163,45 @@ nav img{
 h1{
     font-weight: 550;
 }
+
+.COUNTER{
+    bottom: 0px;
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: center;
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.COUNTER span{
+    padding-left: 5px;
+    font-size: 30px;
+}
+
+
+.COUNTER span2{
+    font-size: 20px;
+}
+
+
+
+/* CSS animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-count {
+    animation: countUp 1s ease-in-out forwards;
+}
