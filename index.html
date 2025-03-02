@@ -44,71 +44,50 @@
     </section>
 
     <script>
-        var navLinks = document.getElementById("navLinks");
-      
-        function showMenu() {
-          navLinks.style.right = "0";
-        }
-      
-        function hideMenu() {
-          navLinks.style.right = "-200px";
-        }
-      
         document.addEventListener("DOMContentLoaded", function () {
-          // Retrieve the current count from LocalStorage or initialize it to 0
-          let count = parseInt(localStorage.getItem("visitorCount")) || 0;
-      
-          // Increment the count for each visit
-          count++;
-      
-          // Update the count in the LocalStorage and display it on the page
-          localStorage.setItem("visitorCount", count);
-          document.getElementById("visitorCount").textContent = count;
-      
-          // Determine the suffix for the count
-          const suffix = getSuffix(count);
-          document.getElementById("visitorSuffix").textContent = suffix;
-      
-          // Animate the visitor count
-          animateCount(count);
-        });
-      
-        function animateCount(targetCount) {
-          const element = document.getElementById("visitorCount");
-          const duration = 1000; // Duration for the animation in milliseconds
-          const framesPerSecond = 30; // Number of frames per second for smooth animation
-          const increment = Math.ceil(targetCount / (duration / 1000) * (1 / framesPerSecond));
-      
-          let currentCount = 0;
-      
-          const intervalId = setInterval(() => {
-            if (currentCount >= targetCount) {
-              element.textContent = targetCount;
-              clearInterval(intervalId);
-            } else {
-              currentCount += increment;
-              element.textContent = currentCount;
-            }
-          }, 1000 / framesPerSecond);
+    fetch("https://sebastiaomacau-github-io-2.onrender.com/visit") // Replace with your Render backend URL
+        .then(response => response.json())
+        .then(data => {
+            const count = data.count; // Get the visitor count from backend
+            document.getElementById("visitorCount").textContent = count;
+            document.getElementById("visitorSuffix").textContent = getSuffix(count);
+            animateCount(count);
+        })
+        .catch(error => console.error("Error fetching visitor count:", error));
+});
+
+function getSuffix(count) {
+    if (count === 11 || count === 12 || count === 13) {
+        return "th";
+    } else {
+        const lastDigit = count % 10;
+        switch (lastDigit) {
+            case 1: return "st";
+            case 2: return "nd";
+            case 3: return "rd";
+            default: return "th";
         }
-      
-        function getSuffix(count) {
-          if (count === 11 || count === 12 || count === 13) {
-            return "th";
-          } else {
-            const lastDigit = count % 10;
-            switch (lastDigit) {
-              case 1:
-                return "st";
-              case 2:
-                return "nd";
-              case 3:
-                return "rd";
-              default:
-                return "th";
-            }
-          }
+    }
+}
+
+function animateCount(targetCount) {
+    const element = document.getElementById("visitorCount");
+    let currentCount = 0;
+    const duration = 1000; // Animation time in milliseconds
+    const increment = Math.ceil(targetCount / 30); // Smooth increment
+
+    const intervalId = setInterval(() => {
+        if (currentCount >= targetCount) {
+            element.textContent = targetCount;
+            clearInterval(intervalId);
+        } else {
+            currentCount += increment;
+            element.textContent = currentCount;
         }
+    }, 33); // Approx 30 frames per second
+}
+
     </script>
+
 </body>
 </html>
