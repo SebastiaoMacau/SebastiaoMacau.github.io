@@ -47,7 +47,7 @@
         document.addEventListener("DOMContentLoaded", function () {
     const cachedCount = localStorage.getItem("visitorCount");
 
-    // Show cached count immediately (it'll be updated after animation)
+    // Show cached count immediately
     if (cachedCount) {
         document.getElementById("visitorCount").textContent = cachedCount;
         document.getElementById("visitorSuffix").textContent = getSuffix(cachedCount);
@@ -58,18 +58,14 @@
         .then(response => response.json())
         .then(data => {
             const count = data.count; // Get the visitor count from backend
-
-            // Animate from 0 to the current count every time
+            localStorage.setItem("visitorCount", count); // Store updated count
             animateCount(count);
-
-            // Update the stored count
-            localStorage.setItem("visitorCount", count);
         })
         .catch(error => console.error("Error fetching visitor count:", error));
 });
 
 function getSuffix(count) {
-    if ([11, 12, 13].includes(count % 100)) return "th";
+    if ([11, 12, 13].includes(count % 100)) return "th"; // Check for 11, 12, 13
     const lastDigit = count % 10;
     return lastDigit === 1 ? "st" :
            lastDigit === 2 ? "nd" :
@@ -78,39 +74,38 @@ function getSuffix(count) {
 
 function animateCount(targetCount) {
     const element = document.getElementById("visitorCount");
-    let currentCount = 0; // Start from 0 each time
-    const duration = 3000; // Total animation time (3 seconds)
-    const frames = 60; // Total number of frames for the animation (60 frames for 60fps)
+    const suffixElement = document.getElementById("visitorSuffix");
+    let currentCount = 0;
+    const duration = 3000; // Animation time in milliseconds (3 seconds)
+    const startTime = Date.now();
 
-    // Set initial value to 0 for animation
-    element.textContent = currentCount;
-
-    let startTime = null;
-
-    function updateAnimation(timestamp) {
-        if (!startTime) startTime = timestamp;
-        const elapsedTime = timestamp - startTime;
-
-        const progress = Math.min(elapsedTime / duration, 1); // Progress ranges from 0 to 1
-
-        // Strong ease-out effect (fast start, slow end)
-        const easeOutProgress = Math.pow(progress, 3); // Cubic easing with a sharper curve
-
-        const increment = Math.ceil(targetCount * easeOutProgress);
-
-        element.textContent = increment;
-
-        // Continue until the animation reaches the target
+    function update() {
+        const elapsedTime = Date.now() - startTime;
         if (elapsedTime < duration) {
-            requestAnimationFrame(updateAnimation);
+            // Animate count (ease from fast to slow)
+            const progress = Math.min(elapsedTime / duration, 1);
+            const easedProgress = easeOutQuad(progress);
+            currentCount = Math.floor(easedProgress * targetCount);
+
+            element.textContent = currentCount;
+            suffixElement.textContent = getSuffix(currentCount);
+
+            requestAnimationFrame(update);
         } else {
+            // Ensure the count reaches the target when the animation is finished
             element.textContent = targetCount;
+            suffixElement.textContent = getSuffix(targetCount);
         }
     }
 
-    // Start the animation
-    requestAnimationFrame(updateAnimation);
+    update();
 }
+
+// Easing function to make the animation start fast and slow down at the end
+function easeOutQuad(t) {
+    return t * (2 - t);
+}
+
 
 
 
