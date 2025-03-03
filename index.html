@@ -79,22 +79,40 @@ function getSuffix(count) {
 function animateCount(targetCount) {
     const element = document.getElementById("visitorCount");
     let currentCount = 0; // Start from 0 each time
-    const duration = 3000; // Total animation time (2 seconds)
+    const duration = 3000; // Total animation time (3 seconds)
     const frames = 60; // Total number of frames for the animation (60 frames for 60fps)
-    const increment = Math.ceil(targetCount / frames); // Smooth increment based on frames
+
+    // Calculate the increment based on the time remaining to give a fast-to-slow effect
+    const totalTimePerFrame = duration / frames;
 
     // Set initial value to 0 for animation
     element.textContent = currentCount;
 
-    const intervalId = setInterval(() => {
-        if (currentCount >= targetCount) {
-            element.textContent = targetCount;
-            clearInterval(intervalId); // Stop the animation when the target is reached
+    let startTime = null;
+
+    function updateAnimation(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const elapsedTime = timestamp - startTime;
+
+        const progress = Math.min(elapsedTime / duration, 1); // Progress ranges from 0 to 1
+
+        // Ease-out effect (progress will increase fast at first, then slow down)
+        const easeOutProgress = 1 - Math.pow(1 - progress, 3); // Cubic easing for smooth slowing down
+
+        const increment = Math.ceil(targetCount * easeOutProgress);
+
+        element.textContent = increment;
+
+        // Continue until the animation reaches the target
+        if (elapsedTime < duration) {
+            requestAnimationFrame(updateAnimation);
         } else {
-            currentCount += increment;
-            element.textContent = currentCount;
+            element.textContent = targetCount;
         }
-    }, duration / frames); // Adjust frame rate for smooth animation
+    }
+
+    // Start the animation
+    requestAnimationFrame(updateAnimation);
 }
 
 
