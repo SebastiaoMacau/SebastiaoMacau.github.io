@@ -61,7 +61,7 @@
             document.getElementById("visitorCount").textContent = count;
             document.getElementById("visitorSuffix").textContent = getSuffix(count);
             localStorage.setItem("visitorCount", count); // Store updated count
-            animateCount(count);
+            animateCount(count); // Animate the count to the new value
         })
         .catch(error => console.error("Error fetching visitor count:", error));
 });
@@ -76,19 +76,20 @@ function getSuffix(count) {
 
 function animateCount(targetCount) {
     const element = document.getElementById("visitorCount");
-    let currentCount = parseInt(localStorage.getItem("visitorCount")) || 0;
+    let currentCount = parseInt(element.textContent) || 0;
     const duration = 1000; // Animation time in milliseconds
-    const increment = Math.ceil((targetCount - currentCount) / 30); // Smooth increment
+    const frames = 30; // Total number of frames for the animation
+    const increment = Math.ceil((targetCount - currentCount) / frames); // Smooth increment based on frames
 
     const intervalId = setInterval(() => {
         if (currentCount >= targetCount) {
             element.textContent = targetCount;
-            clearInterval(intervalId);
+            clearInterval(intervalId); // Stop the animation when the target is reached
         } else {
             currentCount += increment;
             element.textContent = currentCount;
         }
-    }, 33); // Approx 30 frames per second
+    }, duration / frames); // Adjust frame rate to create a smooth animation
 }
 
     </script>
