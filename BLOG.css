@@ -157,6 +157,13 @@ align-items: center;}
     border: transparent;
 }
 
+.row.b3{
+
+    background-image: linear-gradient(90deg,#0f0c29, #302b63, #24243e);
+    border: transparent;
+}
+
+
 h1{
     text-align:left;
     color: rgb(255, 255, 255);
